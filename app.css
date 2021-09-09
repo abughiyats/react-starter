@@ -4,10 +4,15 @@
 
 :root {
   --main-green-color: #1d9e57;
+  --main-black-color: #484848;
 }
 
 .main-green-color {
   color: var(--main-green-color);
+}
+
+.main-black-color {
+  color: var(--main-black-color);
 }
 
 html {
@@ -34,17 +39,18 @@ body {
 .container {
   width: 600px;
   height: 800px;
-  background: #f2eecb;
+  background: #b3b2b1;
   border-radius: 4px;
   padding: 30px;
 }
 
 .frame {
-  border: 1px solid #484848;
+  border: 1px solid var(--main-black-color);
   height: 100%;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
@@ -55,6 +61,8 @@ body {
 .header-title {
   flex: 1;
   text-align: center;
+
+  color: var(--main-black-color);
   font-size: 3.6rem;
   font-family: "Azeret Mono", sans-serif;
   text-transform: lowercase;
@@ -72,6 +80,14 @@ body {
   outline: unset;
   font-weight: 900;
   text-transform: lowercase;
+}
+
+.header-btn.main-green-color:active {
+  text-shadow: 1px 1px 2px var(--main-green-color);
+}
+
+.header-btn.main-black-color:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
 }
 
 .add {
@@ -93,7 +109,7 @@ body {
   border-bottom: 1px solid var(--main-green-color);
   outline: unset;
 
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 24px;
 }
 
@@ -109,4 +125,33 @@ body {
   background: unset;
   border: unset;
   outline: unset;
+}
+
+.add-btn.main-black-color:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  position: relative;
+
+  flex: 1 0 auto;
+  text-align: center;
+
+  min-height: 34px;
+  margin: 16px 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+
+  border-bottom: 1px solid var(--main-green-color);
+}
+
+.todo-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
