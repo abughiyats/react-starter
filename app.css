@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-green-color: #1d9e57;
+}
+
+.main-green-color {
+  color: var(--main-green-color);
+}
+
 html {
   font-size: 10px;
 }
@@ -11,7 +19,7 @@ body {
   justify-content: center;
   align-content: center;
   align-items: center;
-  background: red;
+  background: rgb(34, 34, 34);
   height: 100vh;
 }
 
@@ -25,7 +33,7 @@ body {
 
 .container {
   width: 600px;
-  height: 600px;
+  height: 800px;
   background: #f2eecb;
   border-radius: 4px;
   padding: 30px;
@@ -34,4 +42,71 @@ body {
 .frame {
   border: 1px solid #484848;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-title {
+  flex: 1;
+  text-align: center;
+  font-size: 3.6rem;
+  font-family: "Azeret Mono", sans-serif;
+  text-transform: lowercase;
+}
+
+.header-btn {
+  font-size: 1.8rem;
+  font-family: "Azeret Mono", sans-serif;
+
+  padding: 16px;
+  cursor: pointer;
+
+  background: unset;
+  border: unset;
+  outline: unset;
+  font-weight: 900;
+  text-transform: lowercase;
+}
+
+.add {
+  padding: 16px;
+}
+
+.add-form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.add-input {
+  background: unset;
+  border: unset;
+  padding: 0 64px;
+
+  flex: 1;
+
+  border-bottom: 1px solid var(--main-green-color);
+  outline: unset;
+
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+}
+
+.add-btn {
+  font-size: 1.8rem;
+  font-family: "Azeret Mono", sans-serif;
+  font-weight: bold;
+
+  padding: 16px;
+  padding-right: unset;
+  cursor: pointer;
+
+  background: unset;
+  border: unset;
+  outline: unset;
 }
